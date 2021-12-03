@@ -1,0 +1,36 @@
+.class {
+    object-fit: cover;
+    place-items: center;
+ }
+ 
+#logo {
+     position: absolute;
+     left: 225px;
+ }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  grid-gap: 1rem;
+  object-fit: cover;
+}
+
+.grid > div {
+  background:blanchedalmond;
+  padding: 1rem;
+}
+
+.grid > div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+.grid > div {
+    /* ... */
+    display: grid;
+  }
+  .grid > div::before,
+  .grid > div > img {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
